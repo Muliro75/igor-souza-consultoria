@@ -1,7 +1,12 @@
 .vercel/
+.codex-backups/
 node_modules/
 dist/
 artifacts/
 output/
 .DS_Store
 *.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+.vercel

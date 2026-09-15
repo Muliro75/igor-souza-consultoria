@@ -17,11 +17,11 @@ export function Header() {
     <header className="site-header">
       <a className="brand" href="#inicio" aria-label="Ígor Souza — início">
         <img className="brand-logo" src="/assets/media/igor-logo-gold.png" alt="" />
+        <span>Ígor Souza</span>
       </a>
 
       <nav className="desktop-nav" aria-label="Navegação principal">
-        {links.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
-        <a className="header-contact" href={consultationUrl} target="_blank" rel="noreferrer">Contato</a>
+        <a className="header-contact" href={consultationUrl} target="_blank" rel="noreferrer">Preencher aplicação</a>
       </nav>
 
       <button className="menu-trigger" type="button" onClick={() => setOpen(true)} aria-label="Abrir menu">
