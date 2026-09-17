@@ -878,7 +878,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   @media (max-width: 760px) {
     .hero.hero-cinematic { min-height: max(720px,100svh); }
     .hero-cinematic__promise { bottom: clamp(212px,27svh,252px); }
-    .hero-primary-cta { top: clamp(530px,79svh,680px); bottom: auto; }
+    .hero-primary-cta { top: clamp(570px,92svh,700px); bottom: auto; }
   }
 }
 
