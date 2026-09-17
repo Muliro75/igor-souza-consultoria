@@ -53,23 +53,25 @@ export function Hero() {
           </motion.h1>
         </div>
 
-        <motion.div className="hero-cinematic__promise" variants={reveal} initial="hidden" animate="visible" custom={.58}>
-          <p>Construa um corpo que <em>não passa despercebido.</em></p>
-          <span>Treino e estratégia ajustados ao seu objetivo, à sua rotina e à sua evolução.</span>
-        </motion.div>
+        <div className="hero-cinematic__conversion">
+          <motion.div className="hero-cinematic__promise" variants={reveal} initial="hidden" animate="visible" custom={.58}>
+            <p>Construa um corpo que <em>não passa despercebido.</em></p>
+            <span>Treino e estratégia ajustados ao seu objetivo, à sua rotina e à sua evolução.</span>
+          </motion.div>
 
-        <motion.a
-          className="hero-primary-cta"
-          href={consultationUrl}
-          target="_blank"
-          rel="noreferrer"
-          variants={reveal}
-          initial="hidden"
-          animate="visible"
-          custom={.72}
-        >
-          Quero solicitar uma vaga <i><ArrowUpRight size={18} /></i>
-        </motion.a>
+          <motion.a
+            className="hero-primary-cta"
+            href={consultationUrl}
+            target="_blank"
+            rel="noreferrer"
+            variants={reveal}
+            initial="hidden"
+            animate="visible"
+            custom={.72}
+          >
+            Quero solicitar uma vaga <i><ArrowUpRight size={18} /></i>
+          </motion.a>
+        </div>
 
       </motion.div>
 

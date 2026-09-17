@@ -505,6 +505,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-cinematic__scrim { position: absolute; z-index: 1; inset: 0; pointer-events: none; background: linear-gradient(90deg,rgba(2,13,15,.78) 0%,rgba(2,13,15,.26) 34%,rgba(2,13,15,.06) 57%,rgba(2,13,15,.38) 100%),linear-gradient(180deg,rgba(2,13,15,.36) 0%,rgba(2,13,15,.02) 36%,rgba(2,13,15,.78) 100%); }
 .hero-grain { position: absolute; z-index: 2; inset: 0; opacity: .14; mix-blend-mode: soft-light; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E"); }
 .hero-cinematic__content { position: absolute; z-index: 10; inset: 0; pointer-events: none; }
+.hero-cinematic__conversion { display: contents; }
 .hero-cinematic__identity { position: absolute; top: clamp(145px,18svh,190px); right: 48px; width: min(640px,48vw); color: #f3f1eb; text-align: right; }
 .hero-cinematic__identity h1 { margin: 0; display: flex; flex-direction: column; color: rgba(242,243,241,.95); font-family: 'Cormorant Garamond',Georgia,serif; font-size: clamp(104px,11.5vw,188px); font-weight: 500; line-height: .68; letter-spacing: -.045em; text-transform: uppercase; text-shadow: 0 16px 50px rgba(0,0,0,.22); }
 .hero-cinematic__identity h1 span:last-child { margin-right: 0; color: inherit; font-size: inherit; font-style: normal; font-weight: inherit; }
@@ -877,8 +878,16 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 760px) {
     .hero.hero-cinematic { min-height: max(720px,100svh); }
-    .hero-cinematic__promise { bottom: clamp(212px,27svh,252px); }
-    .hero-primary-cta { top: clamp(570px,92svh,700px); bottom: auto; }
+    .hero-cinematic__conversion {
+      position: absolute; inset: 0 18px auto; height: 100vh; height: 100svh; box-sizing: border-box;
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+      padding-bottom: max(8px,env(safe-area-inset-bottom));
+    }
+    .hero-cinematic__promise { position: static; right: auto; bottom: auto; left: auto; width: 100%; }
+    .hero-primary-cta {
+      position: static; top: auto; right: auto; bottom: auto; left: auto; flex: 0 0 auto;
+      margin-top: 18px; translate: 0 0;
+    }
   }
 }
 
